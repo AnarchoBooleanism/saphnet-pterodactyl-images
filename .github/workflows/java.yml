@@ -51,7 +51,9 @@ jobs:
             type=raw,value=java_${{ matrix.tag }}
           flavor: |
             latest=auto
-      - uses: docker/build-push-action@v7
+      - name: Build and push Docker image
+        id: push
+        uses: docker/build-push-action@v7
         with:
           context: ./java
           file: ./java/${{ matrix.tag }}/Dockerfile
