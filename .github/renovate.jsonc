@@ -1,5 +1,5 @@
 {
-  // NOTE: This should be able to catch github-releases and dockerfile!
+  // NOTE: This should be able to catch github-actions and dockerfile!
 
   // Overall Renovate config
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
@@ -15,6 +15,11 @@
 
   // Package rules
   "packageRules": [
+    // Main
+    {
+      "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest"]
+    },
+
     // Major/minor version pins
     {
       "matchFileNames": ["java/21/Dockerfile"],
