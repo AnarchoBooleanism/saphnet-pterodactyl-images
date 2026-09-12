@@ -1,0 +1,24 @@
+{
+  // NOTE: This should be able to catch github-releases and dockerfile!
+
+  // Overall Renovate config
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:best-practices"
+  ],
+
+  // Package rules
+  "packageRules": [
+    // Major/minor version pins
+    {
+      "matchFileNames": ["java/21/Dockerfile"],
+      "matchPackageNames": ["eclipse-temurin"],
+      "allowedVersions": "/^21(\\.|-)/"
+    },
+    {
+      "matchFileNames": ["java/25/Dockerfile"],
+      "matchPackageNames": ["eclipse-temurin"],
+      "allowedVersions": "/^25(\\.|-)/"
+    }
+  ]
+}
