@@ -20,7 +20,7 @@
 # SOFTWARE.
 #
 
-FROM        --platform=$TARGETOS/$TARGETARCH eclipse-temurin:21-jdk
+FROM        --platform=$TARGETOS/$TARGETARCH eclipse-temurin:21-jdk@sha256:78ab9771b4650066c3ef748d46e05dbd6094d8bb34e0667a074486812efd655b
 
 # What is different here to the original: webp
 RUN 				apt-get update -y \
