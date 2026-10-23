@@ -20,7 +20,7 @@
 # SOFTWARE.
 #
 
-FROM        --platform=$TARGETOS/$TARGETARCH eclipse-temurin:25-jdk@sha256:63f965b560b905c9633218330ac3516304b526a74fdc323a504b05c06e712c30
+FROM        --platform=$TARGETOS/$TARGETARCH eclipse-temurin:25-jdk@sha256:2d5d5e9b533342a565907c84f47a2ec298c40cde7b13a3ca85d4950fa456a641
 
 RUN 				apt-get update -y \
 	&& apt-get install -y lsof curl ca-certificates openssl git tar sqlite3 fontconfig libfreetype6 tzdata iproute2 libstdc++6 webp \
